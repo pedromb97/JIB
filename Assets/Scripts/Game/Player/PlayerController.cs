@@ -10,6 +10,7 @@ namespace LIT.Beaver.Player
         [SerializeField] private Transform _playerContainer;
 
         private Vector2 _currentPosition;
+        private float timeForPressButton = 0;
 
         void Start()
         {
@@ -21,19 +22,35 @@ namespace LIT.Beaver.Player
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
+                if (Time.time - timeForPressButton < 0.2f) 
+                {
                 TryMovePlayer(eMovementDirection.LEFT);
+                }
+                timeForPressButton=Time.time;
             }
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
+                if (Time.time - timeForPressButton < 0.2f) 
+                {
                 TryMovePlayer(eMovementDirection.RIGHT);
+                }
+                timeForPressButton=Time.time;
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                if (Time.time - timeForPressButton < 0.2f) 
+                {
                 TryMovePlayer(eMovementDirection.FORWARDS);
+                }
+                timeForPressButton=Time.time;
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
+                if (Time.time - timeForPressButton < 0.2f) 
+                {
                 TryMovePlayer(eMovementDirection.BACKWARDS);
+                }
+                timeForPressButton=Time.time;
             }
         }
 
