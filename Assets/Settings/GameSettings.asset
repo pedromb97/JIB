@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   mapSettings:
-    sectors: 8
+    sectors: 7
     rings: 3
     bossToFirstRingDistance: 5
     ringsDistance: 3
